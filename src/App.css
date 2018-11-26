@@ -1,3 +1,13 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
 }
@@ -8,25 +18,96 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 82px;
+  background-color: #fff;
+}
+
+.header-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: block;
+  width: 100%;
+  height: 41px;
+  background-color: #fff;
+}
+
+.page-header > h1 {
+  display: block;
+  float: left;
+  line-height: 1rem;
+}
+
+.page-header > h1 > a {
+  /* width: 86px; */
+  padding: 12px 0 0 16px;
+  display: inline-block;
+  height: 41px;
+}
+
+.icon {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  vertical-align: top;
+}
+
+.icon.icon-ddocdoc-bi:before {
+  background-position: -45px -458.6666666666667px;
+  width: 58px;
+  height: 21px;
+}
+
+.icon:before {
+  content: " ";
+  display: block;
+  background-image: url(./sprite.png);
+  background-size: 658.3333333333334px 555.6666666666666px;
+}
+
+.menu-header {
+  background-color: #fff;
+}
+
+.menu-header > ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.menu-header-item {
+  display: inline-block;
+  position: relative;
+}
+
+.menu-header-item:first-child a {
+  padding-left: 16px;
+}
+
+.menu-header-item a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  width: 100%;
+  height: 41px;
+  padding-top: 2px;
+  color: #666;
+  height: 41px;
+  font-size: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
