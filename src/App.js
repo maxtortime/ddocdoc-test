@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get("/v2/eventBanner?populate=true").then(res => {
+    axios.get(window.location.href+"api-mock.json").then(res => {
       const items = res.data.items;
       this.setState({
         items: items
