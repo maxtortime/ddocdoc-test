@@ -1,7 +1,7 @@
 {
   "main.css": "/ddocdoc-test/static/css/main.fb14f5a2.chunk.css",
-  "main.js": "/ddocdoc-test/static/js/main.914a93bf.chunk.js",
-  "main.js.map": "/ddocdoc-test/static/js/main.914a93bf.chunk.js.map",
+  "main.js": "/ddocdoc-test/static/js/main.f3dbdcef.chunk.js",
+  "main.js.map": "/ddocdoc-test/static/js/main.f3dbdcef.chunk.js.map",
   "static/js/1.7e61a862.chunk.js": "/ddocdoc-test/static/js/1.7e61a862.chunk.js",
   "static/js/1.7e61a862.chunk.js.map": "/ddocdoc-test/static/js/1.7e61a862.chunk.js.map",
   "runtime~main.js": "/ddocdoc-test/static/js/runtime~main.719f132d.js",
@@ -9,6 +9,6 @@
   "static/media/App.css": "/ddocdoc-test/static/media/sprite.4b837a21.png",
   "static/css/main.fb14f5a2.chunk.css.map": "/ddocdoc-test/static/css/main.fb14f5a2.chunk.css.map",
   "index.html": "/ddocdoc-test/index.html",
-  "precache-manifest.01b43004dcbb538b24839261cf470f66.js": "/ddocdoc-test/precache-manifest.01b43004dcbb538b24839261cf470f66.js",
+  "precache-manifest.b575fb0f1d48106e04ea78afec9268c7.js": "/ddocdoc-test/precache-manifest.b575fb0f1d48106e04ea78afec9268c7.js",
   "service-worker.js": "/ddocdoc-test/service-worker.js"
 }
