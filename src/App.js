@@ -41,6 +41,20 @@ class App extends Component {
                   <i className="icon icon-ddocdoc-bi"></i>
                 </a>
               </h1>
+              <div className="page-header-tool-area">
+                <a 
+                  className="page-header-button page-header-search" 
+                  href="https://event.ddocdoc.com/search">
+                  <i className="icon icon-search"></i>
+                  <span className="sr-only">검색</span>
+                </a>
+                <a 
+                  className="page-header-button page-header-bookmark" 
+                  href="https://event.ddocdoc.com/bookmark">
+                  <i className="icon icon-heart-empty"></i>
+                  <span className="sr-only">북마크</span>
+                </a>
+              </div>
             </div>
             <div className="menu-header">
               <ul>
