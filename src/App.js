@@ -69,11 +69,11 @@ class App extends Component {
                 />
                 <MenuHeaderItem
                   menuText="신규"
-                  menuHref="https://event.ddocdoc.com/pop"
+                  menuHref="https://event.ddocdoc.com/new"
                 />
                 <MenuHeaderItem
                   menuText="시술별"
-                  menuHref="https://event.ddocdoc.com/pop"
+                  menuHref="https://event.ddocdoc.com/category/list"
                 />
                 <MenuHeaderItem menuText="기획전" menuHref="/" />
               </ul>
