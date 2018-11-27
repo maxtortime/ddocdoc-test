@@ -3,20 +3,12 @@ a {
   text-decoration: none;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
 .App-header {
   height: 82px;
   background-color: #fff;
 }
 
+.content,
 .header-inner {
   max-width: 720px;
   margin: 0 auto;
@@ -37,7 +29,7 @@ a {
 
 .page-header > h1 > a {
   width: 86px;
-  padding: 12px 0 0 0;
+  padding: 12px 0 0 16px;
   display: inline-block;
   height: 41px;
 }
@@ -156,12 +148,9 @@ a {
   float: right;
 }
 
-.page-header-search {
-  width: 40px;
-}
-
-.page-header-bookmark {
-  padding-right: 19px;
+.page-header-button {
+  display: inline-block;
+  height: 41px;
 }
 
 .page-header-search,
@@ -170,9 +159,12 @@ a {
   padding-left: 9px;
 }
 
-.page-header-button {
-  display: inline-block;
-  height: 41px;
+.page-header-search {
+  width: 40px;
+}
+
+.page-header-bookmark {
+  padding-right: 19px;
 }
 
 .icon.icon-search:before {
@@ -257,4 +249,83 @@ a {
 .curation-list-item-premark {
   font-weight: 400;
   color: #f56a6b;
+}
+
+.right-bottom-tools {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 15px;
+}
+
+.right-bottom-tools-top-button {
+  width: 36px;
+  height: 36px;
+  padding: 6px 16px 0;
+  box-sizing: content-box;
+  display: block;
+  background-color: transparent !important;
+}
+
+.right-bottom-tools-top-button-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ddd;
+}
+
+.icon.icon-top:before {
+  background-position: -636px -262.6666666666667px;
+  width: 21px;
+  height: 20px;
+}
+
+.footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 22px 16px;
+  background: #f0f0f0;
+}
+
+.footer-bi-link {
+  margin-bottom: 6px;
+}
+
+.icon.icon-ddocdoc-bi-gray:before {
+  background-position: -361px -433.6666666666667px;
+  width: 48px;
+  height: 16px;
+}
+
+.footer-link-list {
+  line-height: normal;
+  font-size: 12px;
+}
+
+.footer-link-list li {
+  display: inline-block;
+  color: #868e95;
+}
+
+.footer-link-list li:first-child a {
+  padding-left: 0;
+}
+
+.footer-link-list a {
+  padding: 6px 8px;
+}
+
+.footer-copyright {
+  font-size: 11px;
+  color: #adb5be;
 }
