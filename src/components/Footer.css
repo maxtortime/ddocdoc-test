@@ -1,0 +1,39 @@
+.footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 22px 16px;
+  background: #f0f0f0;
+}
+
+.footer-bi-link {
+  margin-bottom: 6px;
+}
+
+.icon.icon-ddocdoc-bi-gray:before {
+  background-position: -361px -433.6666666666667px;
+  width: 48px;
+  height: 16px;
+}
+
+.footer-link-list {
+  line-height: normal;
+  font-size: 12px;
+}
+
+.footer-link-list li {
+  display: inline-block;
+  color: #868e95;
+}
+
+.footer-link-list li:first-child a {
+  padding-left: 0;
+}
+
+.footer-link-list a {
+  padding: 6px 8px;
+}
+
+.footer-copyright {
+  font-size: 11px;
+  color: #adb5be;
+}

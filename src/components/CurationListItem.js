@@ -1,5 +1,6 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
+import "./CurationListItem.css"
 
 export default props => {
   return (

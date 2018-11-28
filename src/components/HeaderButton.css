@@ -1,0 +1,30 @@
+.page-header-button {
+  display: inline-block;
+  height: 41px;
+}
+
+.page-header-search,
+.page-header-bookmark {
+  padding-top: 15px;
+  padding-left: 9px;
+}
+
+.page-header-search {
+  width: 40px;
+}
+
+.page-header-bookmark {
+  padding-right: 19px;
+}
+
+.icon.icon-search:before {
+  background-position: -150px -458.6666666666667px;
+  width: 19px;
+  height: 19px;
+}
+
+.icon.icon-bookmark:before {
+  background-position: -104px -458.6666666666667px;
+  width: 22px;
+  height: 19px;
+}

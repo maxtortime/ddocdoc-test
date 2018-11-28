@@ -1,4 +1,5 @@
 import React from "react";
+import "./HeaderButton.css"
 
 export default props => {
   const typeToKorean = {
