@@ -50,7 +50,7 @@ a {
 .icon:before {
   content: " ";
   display: block;
-  background-image: url(./sprite.png);
+  background-image: url(./assets/images/sprite.png);
   background-size: 658.3333333333334px 555.6666666666666px;
 }
 
@@ -173,7 +173,7 @@ a {
   height: 19px;
 }
 
-.icon.icon-heart-empty:before {
+.icon.icon-bookmark:before {
   background-position: -104px -458.6666666666667px;
   width: 22px;
   height: 19px;
