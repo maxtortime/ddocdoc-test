@@ -1,44 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ddocdoc-coding-test
+https://event.ddocdoc.com/curation 페이지를 React를 이용해서 똑같이 만들어보는 과제입니다.
+[Create React App](https://github.com/facebook/create-react-app) 으로 구성했습니다.
 
-## Available Scripts
+## 설치 및 실행 방법
+1. 터미널을 열고 본 저장소를 clone 합니다.
+```sh
+$ git clone https://github.com/maxtortime/ddocdoc-test
+```
+2. `nodejs`와 `npm`이 설치되어 있어야 합니다.
+```sh
+$ node --version
+v10.13.0
+$ npm --version
+6.4.1
+```
+3. 터미널을 열고 `package.json`이 있는 디렉토리에서 `npm install`을 실행합니다.
+4. 터미널에서 `npm start`를 실행합니다.
+5. 기다리면 웹 브라우저가 열리고[http://localhost:3000](http://localhost:3000) 에서 페이지를 확인할 수 있습니다.
+```sh
+$ cd ddocdoc-test
+$ npm install
+$ npm start
+```
 
-In the project directory, you can run:
+## 프로젝트 구성
+### npm 라이브러리 종속성
+(`Create React App` (CRA)에서 설치하는 것은 제외)
+- gh-pages: CRA 구조에서 GitHub Pages 배포를 쉽게 하기 위한 도구
+- react-lazyload: `lazy loading` (브라우저에 보이는 이미지만 로딩)을 도와주는 컴포넌트
+- axios: AJAX 통신을 쉽게 하기 위한 라이브러리
 
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 폴더 구조
+```
+.
+├── README.md
+├── package.json 
+├── public 
+│   ├── api-mock.json (CORS 문제로 API 데이터를 미리 다운 받아 놓음)
+│   ├── icons 
+│   │   ├── favicon.png
+│   │   ├── icon-128x128.png (안드로이드에서 보일 아이콘을 사이즈별로 저장해놓음)
+│   │   ├── icon-144x144.png
+│   │   ├── icon-152x152.png
+│   │   ├── icon-192x192.png
+│   │   ├── icon-384x384.png
+│   │   ├── icon-512x512.png
+│   │   ├── icon-72x72.png
+│   │   └── icon-96x96.png
+│   ├── index.html
+│   └── manifest.json (안드로이드에서 접속 시 관련 설정 정의)
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── assets
+│   │   └── images
+│   │       └── sprite.png
+│   ├── components
+│   │   ├── CurationList.js
+│   │   ├── CurationListItem.css
+│   │   ├── CurationListItem.js
+│   │   ├── Footer.css
+│   │   ├── Footer.js
+│   │   ├── Header.css
+│   │   ├── Header.js
+│   │   ├── HeaderButton.css
+│   │   ├── HeaderButton.js
+│   │   ├── MenuHeaderItem.css
+│   │   ├── MenuHeaderItem.js
+│   │   ├── MenuHeaderItemList.js
+│   │   ├── ScrollToTopButton.css
+│   │   └── ScrollToTopButton.js
+│   ├── index.css
+│   ├── index.js
+│   └── serviceWorker.js
+├── test
+└── yarn.lock
+```
