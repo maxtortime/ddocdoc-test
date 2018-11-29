@@ -1,6 +1,6 @@
 # ddocdoc-coding-test
-https://event.ddocdoc.com/curation 페이지를 React를 이용해서 똑같이 만들어보는 과제입니다.
-[Create React App](https://github.com/facebook/create-react-app) 으로 구성했습니다.
+https://event.ddocdoc.com/curation 페이지를 React와 Redux를 이용해서 똑같이 만들어보는 과제입니다.
+[Create React App](https://github.com/facebook/create-react-app) 으로 구성했습니다. (2.1.1 버전)
 
 ## 설치 및 실행 방법
 1. 터미널을 열고 본 저장소를 clone 합니다.
@@ -29,58 +29,37 @@ $ npm start
 - gh-pages: CRA 구조에서 GitHub Pages 배포를 쉽게 하기 위한 도구
 - react-lazyload: `lazy loading` (브라우저에 보이는 이미지만 로딩)을 도와주는 컴포넌트
 - axios: AJAX 통신을 쉽게 하기 위한 라이브러리
+- react-redux: react에서 redux 사용을 돕는 라이브러리
+- redux-thunk: ??
 
-### 폴더 구조
-```
+### 디렉토리 / 컴포넌트 구조
+```sh
 .
-├── README.md
-├── package.json 
-├── public 
-│   ├── api-mock.json (CORS 문제로 API 데이터를 미리 다운 받아 놓음)
-│   ├── icons 
-│   │   ├── favicon.png
-│   │   ├── icon-128x128.png (안드로이드에서 보일 아이콘을 사이즈별로 저장해놓음)
-│   │   ├── icon-144x144.png
-│   │   ├── icon-152x152.png
-│   │   ├── icon-192x192.png
-│   │   ├── icon-384x384.png
-│   │   ├── icon-512x512.png
-│   │   ├── icon-72x72.png
-│   │   └── icon-96x96.png
-│   ├── index.html
-│   └── manifest.json (안드로이드에서 접속 시 관련 설정 정의)
-├── src
-│   ├── App.css
-│   ├── App.js
-│   ├── App.test.js
-│   ├── assets
-│   │   └── images
-│   │       └── sprite.png
-│   ├── components
-│   │   ├── CurationList.js
-│   │   ├── CurationListItem.css
-│   │   ├── CurationListItem.js
-│   │   ├── Footer.css
-│   │   ├── Footer.js
-│   │   ├── Header.css
-│   │   ├── Header.js
-│   │   ├── HeaderButton.css
-│   │   ├── HeaderButton.js
-│   │   ├── MenuHeaderItem.css
-│   │   ├── MenuHeaderItem.js
-│   │   ├── MenuHeaderItemList.js
-│   │   ├── ScrollToTopButton.css
-│   │   └── ScrollToTopButton.js
-│   ├── index.css
-│   ├── index.js
-│   └── serviceWorker.js
-├── test
-└── yarn.lock
+├── public
+│   └── icons # 사용자가 Android에서 화면을 볼 때 필요한 아이콘
+└── src
+    ├── api # axios를 이용해서 API 호출을 해서 데이터를 가져오는 모듈
+    ├── assets # 코드 상에서 화면을 그리기 위해 필요한 이미지 등이 저장된 폴더
+    │   └── images
+    ├── components
+    │   ├── CurationList # 광고들의 목록을 담아서 그리는 컴포넌트
+    │   │   └── CurationListItem # 각 광고에 해당하는 컴포넌트
+    │   ├── Footer # 페이지 하단 Footer를 구성하는 컴포넌트
+    │   ├── Header # 페이지 상단 로고 및 메뉴를 구성하는 컴포넌트
+    │   │   ├── HeaderButton # 헤더에서 검색 및 찜하기 버튼 컴포넌트
+    │   │   └── MenuHeaderItemList # 헤더에서 각 메뉴 요소를 담는 목록 컴포넌트
+    │   │       └── MenuHeaderItem # 헤더에서 각 메뉴를 구성하는 컴포넌트
+    │   └── ScrollToTopButton # 페이지 상단으로 스크롤 해주는 버튼 컴포넌트
+    ├── container # Redux 와 통신해서 실제 화면을 그릴 컴포넌트에게 데이터를 전달하는 역할
+    │   └── CurationListContainer # CurationList 에게 Redux 에서 변경한 데이터를 전달하는 역할
+    └── store # Redux 에서 데이터를 종합적으로 관리하는 역할
 ```
 
-### 컴포넌트 설명
-- CurationList / CurationListItem: 각 광고 아이템(이미지, 설명)을 그리는 컴포넌트 및 그 목록
-- Footer: 페이지 하단 footer를 그리는 컴포넌트
-- Header: 페이지 상단 로고 및 링크를 그리는 컴포넌트
-- HeaderButton: 페이지 상단의 검색, 찜하기 기능을 동작시키는 버튼
-- MenuHeaderItemList / MenuHeaderItem: 헤더 메뉴의 각 링크를 그리는 컴포넌트 및 그 목록 
+## 배포하기
+GitHub Pages를 이용해서 배포할 경우 아래의 명령어를 실행하면 됩니다.
+```sh
+$ npm deploy
+# GitHub 아이디와 비밀번호를 입력하면
+# gh-pages 브랜치에 프로덕션 용으로 빌드된 파일이 알아서 옮겨지고
+# http://<GitHub아이디>.github.io/<저장소이름> 에 페이지가 배포됩니다.
+```
