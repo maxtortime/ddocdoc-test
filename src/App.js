@@ -1,20 +1,18 @@
 import React, { Component } from "react";
-import Header from "./components/Header/Header.js";
-import CurationListContainer from "./container/CurationListContainer/CurationListContainer.js";
-import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton.js";
-import Footer from "./components/Footer/Footer.js";
+import Header from "./components/Header/Header";
+import CurationListContainer from "./container/CurationListContainer/CurationListContainer";
+import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 class App extends Component {
-  state = {
-    baseUrl: "https://event.ddocdoc.com/",
-    menuTypes: ["홈", "인기", "신규", "시술별", "기획전"]
-  };
+  getBaseUrl = () => "https://event.ddocdoc.com/";
+  getMenuTypes = () => ["홈", "인기", "신규", "시술별", "기획전"];
 
   render() {
     return (
       <div className="App">
-        <Header baseUrl={this.state.baseUrl} menuTypes={this.state.menuTypes} />
+        <Header baseUrl={this.getBaseUrl()} menuTypes={this.getMenuTypes()} />
         <CurationListContainer />
         <ScrollToTopButton />
         <Footer />

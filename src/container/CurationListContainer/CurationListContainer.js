@@ -1,30 +1,29 @@
 import React, { Component } from "react";
-import { getPromotionListApi } from "../../api";
-import CurationListItem from "../../components/CurationListItem/CurationListItem";
+import { getCurationsList } from "./CurationListContainer.thunk";
+import { connect } from "react-redux";
+import CurationList from "../../components/CurationList/CurationList";
 
-class CurationListContainer extends Component {
-  state = {
-    items: []
-  };
-
-  componentDidMount() {
-    getPromotionListApi().then(res => {
-      const items = res.data.items;
-      this.setState({ items });
-    });
+class CurationWrapper extends Component {
+  async componentDidMount() {
+    await this.props.getCurationsList();
   }
 
   render() {
-    const listItems = this.state.items.map(item => (
-      <CurationListItem key={item.groupId._id} info={item} />
-    ));
-
-    return (
-      <div className="content">
-        <ul>{listItems}</ul>
-      </div>
-    );
+    return <CurationList curations={this.props.curations} />;
   }
 }
+
+const mapStateToProps = ({ curationListContainer }) => ({
+  curations: curationListContainer.curations
+});
+
+const mapDispatchToProps = {
+  getCurationsList
+};
+
+const CurationListContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CurationWrapper);
 
 export default CurationListContainer;
