@@ -1,6 +1,6 @@
 import React from "react";
-import MenuHeaderItemList from "./MenuHeaderItemList.js";
-import HeaderButton from "./HeaderButton.js";
+import MenuHeaderItemList from "./MenuHeaderItemList/MenuHeaderItemList";
+import HeaderButton from "./HeaderButton/HeaderButton";
 import "./Header.css";
 
 export default ({ baseUrl, menuTypes }) => {

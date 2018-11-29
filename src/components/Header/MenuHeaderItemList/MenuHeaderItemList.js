@@ -1,5 +1,5 @@
 import React from "react";
-import MenuHeaderItem from "./MenuHeaderItem.js";
+import MenuHeaderItem from "./MenuHeaderItem/MenuHeaderItem";
 
 export default ({ menuTypes }) => {
   return (

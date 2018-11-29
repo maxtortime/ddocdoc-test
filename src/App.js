@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Header from "./components/Header.js";
-import CurationList from "./components/CurationList.js";
-import ScrollToTopButton from "./components/ScrollToTopButton.js";
-import Footer from "./components/Footer.js";
+import Header from "./components/Header/Header.js";
+import CurationListContainer from "./container/CurationListContainer/CurationListContainer.js";
+import ScrollToTopButton from "./components/ScrollToTopButton/ScrollToTopButton.js";
+import Footer from "./components/Footer/Footer.js";
 import "./App.css";
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header baseUrl={this.state.baseUrl} menuTypes={this.state.menuTypes} />
-        <CurationList />
+        <CurationListContainer />
         <ScrollToTopButton />
         <Footer />
       </div>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { getPromotionListApi } from "../api";
-import CurationListItem from "./CurationListItem.js";
+import { getPromotionListApi } from "../../api";
+import CurationListItem from "../../components/CurationListItem/CurationListItem";
 
-class CurationList extends Component {
+class CurationListContainer extends Component {
   state = {
     items: []
   };
@@ -27,4 +27,4 @@ class CurationList extends Component {
   }
 }
 
-export default CurationList;
+export default CurationListContainer;
