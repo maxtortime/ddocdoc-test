@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./ScrollToTopButton.css";
 
 class ScrollToTopButton extends Component {
   handleClick() {

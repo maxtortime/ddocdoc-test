@@ -1,28 +1,23 @@
 import React, { Component } from "react";
-import axios from "axios";
+import { getPromotionListApi } from "../api";
 import CurationListItem from "./CurationListItem.js";
 
 class CurationList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: []
-    };
-  }
+  state = {
+    items: []
+  };
 
   componentDidMount() {
-    axios.get(window.location.href + "api-mock.json").then(res => {
+    getPromotionListApi().then(res => {
       const items = res.data.items;
-      this.setState({
-        items: items
-      });
+      this.setState({ items });
     });
   }
 
   render() {
-    const listItems = this.state.items.map(item => {
-      return <CurationListItem key={item.groupId._id} info={item} />;
-    });
+    const listItems = this.state.items.map(item => (
+      <CurationListItem key={item.groupId._id} info={item} />
+    ));
 
     return (
       <div className="content">

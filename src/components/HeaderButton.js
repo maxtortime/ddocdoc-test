@@ -1,18 +1,14 @@
 import React from "react";
-import "./HeaderButton.css"
+import "./HeaderButton.css";
 
-export default props => {
-  const typeToKorean = {
-    search: "검색",
-    bookmark: "즐겨찾기"
-  };
+export default ({ baseUrl, keyword, name }) => {
   return (
     <a
-      className={"page-header-button page-header-" + props.type}
-      href={props.baseUrl + props.type}
+      className={`page-header-button page-header-${name}`}
+      href={`${baseUrl}${name}`}
     >
-      <i className={"icon icon-" + props.type} />
-      <span className="sr-only">{typeToKorean[props.type]}</span>
+      <i className={`icon icon-${name}`} />
+      <span className="sr-only">{keyword}</span>
     </a>
   );
 };

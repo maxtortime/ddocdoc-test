@@ -1,6 +1,7 @@
 import React from "react";
+import "./Footer.css";
 
-export default props => {
+export default () => {
   return (
     <footer className="footer">
       <h5 className="footer-bi-link">

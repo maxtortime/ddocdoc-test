@@ -77,3 +77,10 @@ $ npm start
 ├── test
 └── yarn.lock
 ```
+
+### 컴포넌트 설명
+- CurationList / CurationListItem: 각 광고 아이템(이미지, 설명)을 그리는 컴포넌트 및 그 목록
+- Footer: 페이지 하단 footer를 그리는 컴포넌트
+- Header: 페이지 상단 로고 및 링크를 그리는 컴포넌트
+- HeaderButton: 페이지 상단의 검색, 찜하기 기능을 동작시키는 버튼
+- MenuHeaderItemList / MenuHeaderItem: 헤더 메뉴의 각 링크를 그리는 컴포넌트 및 그 목록 

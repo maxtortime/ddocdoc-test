@@ -6,13 +6,10 @@ import Footer from "./components/Footer.js";
 import "./App.css";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      baseUrl: "https://event.ddocdoc.com/",
-      menuTypes: ["홈", "인기", "신규", "시술별", "기획전"]
-    };
-  }
+  state = {
+    baseUrl: "https://event.ddocdoc.com/",
+    menuTypes: ["홈", "인기", "신규", "시술별", "기획전"]
+  };
 
   render() {
     return (

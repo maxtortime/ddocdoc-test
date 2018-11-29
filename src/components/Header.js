@@ -1,25 +1,36 @@
 import React from "react";
 import MenuHeaderItemList from "./MenuHeaderItemList.js";
 import HeaderButton from "./HeaderButton.js";
-import "./Header.css"
+import "./Header.css";
 
-export default props => {
+export default ({ baseUrl, menuTypes }) => {
+  const headerButtonTypes = [
+    { name: "search", keyword: "검색" },
+    { name: "bookmark", keyword: "즐겨찾기" }
+  ];
+
   return (
     <header className="App-header">
       <div className="header-inner">
         <div className="page-header">
           <h1>
-            <a href={props.baseUrl}>
+            <a href={baseUrl}>
               <i className="icon icon-ddocdoc-bi" />
             </a>
           </h1>
           <div className="page-header-tool-area">
-            <HeaderButton type="search" baseUrl={props.baseUrl} />
-            <HeaderButton type="bookmark" baseUrl={props.baseUrl} />
+            {headerButtonTypes.map(({ name, keyword }, idx) => (
+              <HeaderButton
+                key={idx}
+                name={name}
+                baseUrl={baseUrl}
+                keyword={keyword}
+              />
+            ))}
           </div>
         </div>
         <div className="menu-header">
-          <MenuHeaderItemList menuTypes={props.menuTypes} />
+          <MenuHeaderItemList menuTypes={menuTypes} />
         </div>
       </div>
     </header>
